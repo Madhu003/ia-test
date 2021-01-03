@@ -3,10 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import MyContext from "./Context";
+import apiData from './apiData.json';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <MyContext.Provider value={{ apiData }}>
+      <App />
+    </MyContext.Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
